@@ -19,9 +19,16 @@ var fail = function (message) {
     alert(message)
 }
 var success = function (data) {
-        console.log("succes");
+    console.log("succes");
 }
-cordova.plugins.DownloadManager.download("Your URL to download", success, fail);
+cordova.plugins.DownloadManager.download(
+    "URL to download", 
+    "File name", 
+    "File mimeType", 
+    "Notification title", 
+    "Notification description",
+    success, 
+    fail);
  ```
 
 ## Result
